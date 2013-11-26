@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Android Build, Test and Deploy with Gradle</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- Any section element inside of this container is displayed as a slide -->
+
+				<section>
+					<br />
+					<br />
+					<br />
+					<h1>Android Build, Test and Deploy with Gradle</h1>
+				</section>
+
+				<section>
+					<h1>About Me</h1>
+					<br />
+					<h2>Ravindra Kumar</h2>
+					<p>Mobile Enthusiast, Open Source Addict</p>
+					<h3>Front End Engineer @ Cleartrip</h3>
+					<p>hacker, bug fixer, benchmark runner</p>
+
+					<p>
+						<b>Email:</b> ravidsrk AT gmail.com <br />
+						<b>Twitter:</b> @ravidsrk <br />
+						<b>Github:</b> /ravidsrk <br />
+					ravidsrk almost everywhere else.</p>
+
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+
+					<br />
+					<ul>
+						<li>Introduction to Building Maintainable Android Apps</li>
+						<li>Integrating the build environment with Gradle</li>
+						<li>Unit testing in the Dalvik Virtual Machine</li>
+						<li>Exercises
+							<ol>
+								<li>Testing with Robotium</li>
+								<li>Testing with Spoon and Robotium</li>
+							</ol>
+						</li>
+						<li>What next?</li>
+					</ul>
+
+				</section>
+
+				<section>
+
+					<h2>Warning before we start</h2>
+					<br>
+					<ul>
+						<li>This is not TESTING course for ANDROID.</li>
+						<li>We will be learning NEW ANDROID BUILD SYSTEM.</li>
+						<li>I won't be helping anyone NOW to SETUP ANDROID/GRADLE</li>
+					</ul>
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p>
+						<b>*Caution:</b> Not following advice will result in severe damage and makes me SAY: I TOLD YOU SO :)
+					</p>
+				</section>
+
+				<section>
+					<br>
+					<br>
+					<br>
+					<h1>Building Maintainable Android Apps</h1>
+				</section>
+
+				<section>
+					<h2>Maintainable?? Android?? App?? </h2>
+					
+					<br />
+					<ul>
+						<li>Fix a bug</li>
+						<li>Add new features</li>
+						<li>Improve usability</li>
+						<li>Increase performance</li>
+						<li>Make a fix that prevents a bug from occurring in future</li>
+						<li>Make changes to support new environments operating systems or tools</li>
+						<li>Make it easier for others to maintain the software</li>
+					</ul>		
+				</section>
+
+				<section>
+					<h2>Gradle</h2>
+					<p>The goals of the new build system are:</p>
+					<ul>
+						<li> Make it easy to reuse code and resources</li>
+						<li> Make it easy to create several variants of an application, either for multi-apk distribution or for different flavors of an application</li>
+						<li> Make it easy to configure, extend and customize the build process</li>
+						<li> Good IDE integration</li>
+					</ul>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
