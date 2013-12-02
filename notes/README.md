@@ -152,13 +152,13 @@ The Android testing API provides hooks into the Android component and applicatio
 
 #### Unit and Functional Examples
 
-Let's try testing a very simple application called [SimpleApp](https://github.com/thecodepath/android-simple-app). This app is just two activities. The first (`FirstActivity`) has a text field and a button. When you type in the text field and hit the button, a `SecondActivity` appears that displays the text entered.
+Let's try testing a very simple application called [SimpleApp](https://github.com/ravidsrk/droidcon-gradle-workshop/tree/master/source-files/1_GradleSample). This app is just two activities. The first (`FirstActivity`) has a text field and a button. When you type in the text field and hit the button, a `SecondActivity` appears that displays the text entered.
 
 <img src="http://i.imgur.com/xvLWuQT.png" width="430" alt="Screen 1" />
 &nbsp;
 <img src="http://i.imgur.com/xfjivnn.png" width="430" alt="Screen 2" />
 
-Let's take a look at how to test this very simple application using the Android testing framework. Make sure to [download SimpleApp](https://github.com/thecodepath/android-simple-app) and import the project into your workspace. First, let's create directories for testing setup.
+Let's take a look at how to test this very simple application using the Android testing framework. Make sure to [download SimpleApp](https://github.com/ravidsrk/droidcon-gradle-workshop/tree/master/source-files/1_GradleSample) and import the project into your workspace. First, let's create directories for testing setup.
 
 ```bash
 ➜  AndroidGradleStarter git:(master) cd SampleApp
@@ -279,7 +279,7 @@ public class FirstActivityUnitTest extends
 }
 ```
 
-The full source code for that file can be [found here](https://gist.github.com/nesquena/7f38c84891abe7528991). This is the basic structure of an Activity unit test. Now, in Eclipse we can right-click and select "Run As..." and then select "Android JUnit Test" and the tests will execute within the test runner. The tests should both pass and the "test bar" should be green.
+This is the basic structure of an Activity unit test. Now, in Eclipse we can right-click and select "Run As..." and then select "Android JUnit Test" and the tests will execute within the test runner. The tests should both pass and the "test bar" should be green.
 
 For completeness, let's also check out how to write functional tests. The last test was a simple "unit test" that checked the first activity. Let's now write an integration test that will test the flow of both activities and check the text is properly displayed on the second activity. Create a new test class called `SimpleActivityFunctionalTest` extending from superclass `android.test.ActivityInstrumentationTestCase2`. The overall structure of a `SimpleActivityFunctionalTest` is:
 
@@ -364,7 +364,7 @@ public class SimpleActivityFunctionalTest extends
 }
 ```
 
-The full functional test source code can be [found here](https://gist.github.com/nesquena/0c5be91e4cd7698cf3be). At this point we have tested the functionality of our basic application and we have explored both unit testing and functional testing approaches using the built-in Android Testing Framework.
+At this point we have tested the functionality of our basic application and we have explored both unit testing and functional testing approaches using the built-in Android Testing Framework.
 
 #### More Details
 
@@ -376,7 +376,7 @@ This framework is designed to provide black box tests for Android applications. 
 
 #### Robotium Example
 
-Let's take a look at writing blackbox integration tests with Robotium for our [SimpleApp](https://github.com/thecodepath/android-simple-app). First, you need to setup a "Test Project" much the same way as you would for the Android Testing Framework above. So check the previous "example" section above and generate a "Test Project" called "SimpleAppTest". Be sure to download the [SimpleApp](https://github.com/thecodepath/android-simple-app) and read what the app does in the previous section testing section as well.
+Let's take a look at writing blackbox integration tests with Robotium for our [SimpleApp](https://github.com/ravidsrk/droidcon-gradle-workshop/tree/master/source-files/1_GradleSample). First, you need to setup a "Test Project" much the same way as you would for the Android Testing Framework above. So check the previous "example" section above and generate a "Test Project" called "SimpleAppTest". Be sure to download the [SimpleApp](https://github.com/ravidsrk/droidcon-gradle-workshop/tree/master/source-files/1_GradleSample) and read what the app does in the previous section testing section as well.
 
 Next, we need to add the [robotium jar](https://code.google.com/p/robotium/downloads/list) to our Test Project. Download the latest "robotium-solo-X.X.jar". You need to add the robotium JAR to the Libraries on the projects Build Path.
 
