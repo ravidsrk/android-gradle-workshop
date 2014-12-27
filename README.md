@@ -1,6 +1,8 @@
 android-gradle-workshop
 ========================
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-droidcon--gradle--workshop-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/1271)
+
 Droidcon 2013 Gradle workshop: https://funnel.hasgeek.com/droidcon2013/881-android-build-test-and-deploy-with-gradle
 
 
